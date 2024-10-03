@@ -17,7 +17,7 @@ jobs:
       name: aws-lab-fiap
     steps:
       - name: Checkout
-          uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: AWS Configure
         uses: aws-actions/configure-aws-credentials@v4
