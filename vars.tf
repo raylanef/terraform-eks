@@ -3,7 +3,7 @@ variable "regionDefault" {
 }
 
 variable "projectName" {
-  default = "EKS-RAPIDDU"
+  default = "EKS-RAPPIDU"
 }
 
 variable "labRole" {
