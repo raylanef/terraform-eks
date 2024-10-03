@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rappidu-application
+  labels:
+    app: rappidu-application
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rappidu-application
+  template:
+    metadata:
+      labels:
+        app: rappidu-application
+    spec:
+      imagePullSecrets:
+      - name: regcred # Referência ao Secret criado para autenticação
+      containers:
+      - name: rappidu-application
+        image: 052720570949.dkr.ecr.us-east-1.amazonaws.com/rappidu-application:latest
+        ports:
+        - containerPort: 8080
